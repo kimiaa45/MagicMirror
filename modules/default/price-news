@@ -1,0 +1,14 @@
+Module.register("price-news",{
+	// Default module config.
+	defaults: {
+		header: "قیمت طلا و ارز"
+    url: "https://www.iranjib.ir/showgroup/23/realtime_price"
+	},
+
+	// Override dom generator.
+	getDom: function() {
+		var wrapper = document.createElement("div");
+		wrapper.innerHTML = this.config.text;
+		return wrapper;
+	}
+});
